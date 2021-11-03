@@ -1,0 +1,110 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+body .background-image {
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  height: 450px;
+  width: 400px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.card button {
+	background-color: rgb(75, 105, 21, 0.9);
+	border: 0;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px;
+	margin: 10px;
+	width: 400px;
+}
+
+.card button:active {
+	transform: scale(0.98);
+}
+
+.card button:focus {
+	outline: none
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(47, 59, 25, 0.8);
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card img {
+    height: 250px;
+    width: 300px;
+  }
+  .card button {
+    width: 300px;
+  }
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card button {
+    width: 300px;
+  }
+}
